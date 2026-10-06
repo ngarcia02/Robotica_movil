@@ -51,20 +51,40 @@ Estos estados sirven para sacar al robot de situaciones de bloqueo causadas por 
 En un inicio implementamos el primer caso, cuyos resultados no fueron malos, pero sí mejorables. Seguidamente probamos la selección de sentido de giro aleatorio, la cual ofrecía resultados bastante buenos. A continuación probamos el tercer modo, que pese a ser el que parecía más óptimo no arrojó unos resultados mucho mejores que el anterior, incluso en ocasiones peores. Como consecuencia de ello, realicé una mezcla de estos dos últimos modos, aplicando el calculo de sentido de giro solo cuando entrabamos del estado de retroceso al de giro, intentando así optimizar el programa y mejorar las respuestas del robot cuando se quedaba encerrado. No obstante, este último método pese a dar resultados favorables y mejores que en el primer caso, a veces era superado en porcentaje de limpieza por la opción de sentido de giro aleatorio.
   
 ## ⭐ Vídeos
-  (se subiran proximamente debido a problemas de edición/recorte)
+
   En esta sección se mostrarán los vídeos con el progreso de la práctica y la comparación de estos en función a los métodos usados como es el caso del video con senttido de giro aleatorio y el de sentido de giro mixto, que son los que más controversia crearon durante la elaboración del proyecto.
 
   ##### AVANZAR-GIRO-ATRÁS
-  ....
+
+https://github.com/user-attachments/assets/c03fc73f-57fd-4b0b-af11-b22b132ebb2e
+
+
+  A pesar de ser una implementación básica el porcentaje de limpieza en solo 7 minutos es bastante grande. No obstante, a largo plazo el robot iba quedándose estancado en zonas conbcretas.
+
   ##### ESPIRAL
-  ....
+
+https://github.com/user-attachments/assets/ce43c1e8-313c-4d97-a2d3-3a4cf8451ca3
+
+  En esta primera implementación de la espiral podemos ver gran eficacia y mayor cobertura de espacios.
+ 
   ##### ESPIRAL CON GIRO CONTROLADO
-  ....
+  
+https://github.com/user-attachments/assets/6be27418-a70c-4404-a227-ce121606d1d9
+
+  En este caso podemos ver como cubre mucho mejor las zonas cubiertas, pese a que deja varios huecos sobre todo en la habitación vacía de la izquierda, cubre con bastante eficacia otras zonas como la zona baja del salón y el pasillo, sin atascarse como solía suceder antes. No obstante, podemos ver mayor eficacia y cobertura en la aplicación con giro aleatorio.
+
   ##### ESPIRAL CON GIRO ALEATORIO
-  ....
+
+https://github.com/user-attachments/assets/f8ebf435-5e7c-4fbb-a826-61aa4b9b4a9f
+
+  En comparación con el caso anterior podemos ver un mayor grado de eficacia, nada demasiado exagerado, pero se puede apreciar con claridad como desde un inicio se limpia más espacio con mayor rapidez. Asimismo, podemos ver que se repite el mismo patrón en la habitación vacía de la izquierda donde se deja un hueco completo sin limpiar.
+
+  En el código de la práctica se ha dejado el ejemplo de giro mixto, cuyos resultados son una mezcla entre el caso de giro aleatorio completo y el de controlado, con la distinción de que es un poco más lento que el sistema con giro completamente aleatorio.
+
   
 ## ⭐ Problemas detectados
   El mayor reto durante la práctica fue la elección de los parámetros que regirían la ejecución de la práctica, principalmente la elección de una distancia límite al obstáculo y la elección de periodos de tiempo correctos que limitasen la ejecución de giro y de otros estados ya mencionados. Este primer parámetro fue variando durante el programa iniciado con un valor de 0.5, el cual causaba la generación de huecos sin limpiar cerca de las paredes, motivo por el cual traté de reducir su valor a distancias de 0.25, 0.30 y 0.35. Finalmente, en el último modelo apliqué el valor de 0.35, que reducía estos huecos y no causaba problemas graves a la hora de limpiar cerca de obstáculos conflictivos como los muebles del salón (principalmente la mesita). En cuanto, a los parámetros de duración usados para la temporización de estados, estos fueron estimados en función a lo observado en las simulaciones. 
+  
   Como he mencionado antes en la elección de parámetros, en muchas ocasiones el robot tenía problemas con muebles de la casa concretos, como son la mesita del salón y la mesa de la cocina, ya que en muchas ocasiones el robot se metía por debajo y en muchas ocasiones se quedaba bloqueado en esas posiciones sin moverse. Tras realizar modificaciones en mi modelo pude solventar un poso esos estancamientos, sin embargo, en alguno de los vídeos se puede ver incluso como el propio simulador "tiembla" debido a ese bloqueo que experimenta.
 
 ------------------------------------------------------------------------------------------------------------------------
