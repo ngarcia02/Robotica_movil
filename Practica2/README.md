@@ -9,8 +9,9 @@ En esta práctica configuré el funcionamiento de un coche de carreras para cual
 #### 📷​ Cámara:
   Por medio de la librería openCv, se realizó un filtrado HSV que nos mostraba la detección de la línea roja del circuito. Por ello, este sensor establece las dos primeras condiciones de funcionamiento del coche:
   
-  -Detección de línea → si se detecta un número definido de píxeles la linea está siendo detectada por tanto circulamos
-  -Búsqueda de la línea → el coche no detecta la linea roja o detecta un número de pixeles muy bajo, en ese caso reducimos el avance e iniciamos la búsqueda
+  - Detección de línea → si se detecta un número definido de píxeles la linea está siendo detectada por tanto circulamos
+  
+  - Búsqueda de la línea → el coche no detecta la linea roja o detecta un número de pixeles muy bajo, en ese caso reducimos el avance e iniciamos la búsqueda
     
 #### 🎛️​ Controlador PID:
   Para poder estabilizar el seguido de línea del coche de carreras y su desempeño en los circuitos, se diseñó un controlador encargado de gestionar el giro del vehículo en función de lo detectado por el sensor.
