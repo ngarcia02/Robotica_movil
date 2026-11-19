@@ -9,6 +9,7 @@ Repositorio con las prácticas de la asignatura Robótica movil, desarrolladas e
 | 1 | Basic Vacuum Cleaner | Algoritmo simple de navegación para una aspiradora autónoma | [`Practica1/`](Practica1) |
 | 2 | Follow Line | Coche  sigue lineas con controlador PID | [`Practica2/`](Practica2) |
 | 3 | Obstacle Avoidance (VFF) | Navegación local con campos de fuerzas virtuales: el coche esquiva obstáculos y recorre el circuito pasando por todos los waypoints | [`Practica3/`](Practica3) |
+| 4 | Global Navigation | Navegación de un coche autónomo por medio de GPP| [`Practica4/`](Practica4) |
  
  
 ## 🛠️ Herramientas
